@@ -41,16 +41,19 @@ public class Customer implements Serializable {
     private String googlePlusCode;
 
     @Column(name = "is_premium")
-    private boolean isPremimum;
+    private boolean isPremium;
 
     @Column(name = "date_of_birth")
 //    @DateTimeFormat(pattern = "yyyy-MM-dd")
 //    private Date dateOfBirth;
-    private Timestamp timestamp;
+    private Timestamp dateOfBirth;
 
     @Enumerated(EnumType.STRING)
     private IdType idType;
 
     @Column(name = "id_value", length = 30)
     private String idValue;
+
+    @Column(name = "is_active")
+    private boolean isActive = true;
 }
