@@ -2,13 +2,15 @@ package com.metateam.sba.entity;
 
 import com.metateam.sba.enums.IdType;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
 
 @Builder
-@Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -56,4 +58,48 @@ public class Customer implements Serializable {
 
     @Column(name = "is_active")
     private boolean isActive = true;
+
+    public Integer getId() {
+        return this.id;
+    }
+
+    public String getFullName() {
+        return this.fullName;
+    }
+
+    public String getMobileNumber() {
+        return this.mobileNumber;
+    }
+
+    public String getEmailAddress() {
+        return this.emailAddress;
+    }
+
+    public String getAddress() {
+        return this.address;
+    }
+
+    public String getGooglePlusCode() {
+        return this.googlePlusCode;
+    }
+
+    public boolean getIsPremium() {
+        return this.isPremium;
+    }
+
+    public Timestamp getDateOfBirth() {
+        return this.dateOfBirth;
+    }
+
+    public IdType getIdType() {
+        return this.idType;
+    }
+
+    public String getIdValue() {
+        return this.idValue;
+    }
+
+    public boolean getIsActive() {
+        return this.isActive;
+    }
 }
