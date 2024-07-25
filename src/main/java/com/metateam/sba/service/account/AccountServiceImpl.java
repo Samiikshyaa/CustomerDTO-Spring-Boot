@@ -59,10 +59,10 @@ public class AccountServiceImpl implements AccountService{
     public void deleteById(Integer id) {
 
     }
-
     @Override
     public AccountDto getCurrentBalance(String parameter) {
-        Map<String, Object> map = accountRepository.findByMobileNumberorAccountNumber(parameter);
-        return null;
+//        Map<String, Object> map = accountRepository.findByMobileNumberorAccountNumber(parameter);
+        AccountDto accountDto = accountRepository.findByMobileNumberOrAccountNumber(parameter);
+        return accountDto;
     }
 }

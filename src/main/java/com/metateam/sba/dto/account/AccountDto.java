@@ -12,6 +12,7 @@ import java.sql.Timestamp;
 @Getter
 @Setter
 @Builder
+@ToString
 
 public class AccountDto {
 
@@ -37,4 +38,14 @@ public class AccountDto {
 
     private Customer customer;
 
+    private String email;
+
+    private String mobile_number;
+
+    public AccountDto(double totalbalance, String customerName, String email, String mobile_number) {
+        this.totalbalance = totalbalance;
+        this.customerName = customerName;
+        this.email = email;
+        this.mobile_number = mobile_number;
+    }
 }
